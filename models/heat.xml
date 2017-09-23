@@ -1,0 +1,20 @@
+<model>
+    <formulas>
+        <formula_x>
+            x + laplacian.x * vel
+        </formula_x>
+        <formula_y>
+            y + (laplacian.y - x) * vel
+        </formula_y>
+    </formulas>
+    <variables>
+        <variable name="vel" min="0.001" max="0.03" value="0.015" />
+    </variables>
+    <params>
+        <component color="x" height="y" />
+        <max x="1.0" y="1.0" z="1.0" />
+        <min x="-1.0" y="-1.0" z="-1.0" />
+        <init x="-1.0" y="-1.0" z="-1.0" />
+        <default x="1.0" y="0.0" z="0.0" />
+    </params>
+</model>
