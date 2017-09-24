@@ -2,7 +2,7 @@
 
 ofxRDSampleRenderer::ofxRDSampleRenderer() : updatedOptions(true) {
     options.add(ofParameter<float>().set("meshDepth", 100.0f, 0.0f, 400.f));
-    options.add(enableBicubic.set("enableBicubic", false));
+    options.add(ofParameter<int>().set("interpolationMode", 1, 0, 2));
     options.add(enableHeatMap.set("enableHeatMap", true));
     
     auto colorArray = new ofVec4f[6] {
@@ -95,7 +95,6 @@ void ofxRDSampleRenderer::draw(){
     render.setUniformTexture("cellMap", mapTexture, 0);
 
     if (updatedOptions) {
-        render.setUniform1i(enableBicubic.getName(), enableBicubic);
         render.setUniform1i(enableHeatMap.getName(), enableHeatMap);
         render.setUniforms(options);
         updatedOptions = false;

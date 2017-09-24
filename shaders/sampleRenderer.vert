@@ -8,7 +8,7 @@ uniform vec4 colors[6];
 uniform float colors_pos[6];
 uniform float resolution;
 uniform float meshDepth;
-uniform bool enableSmoothing;
+uniform int interpolationMode;
 uniform bool enableHeatMap;
 uniform vec3 minParam;
 uniform vec3 maxParam;
@@ -173,10 +173,19 @@ void main()
     int meshWidth = int(float(textureSize(cellMap).x) / resolution);
     ivec2 meshIdx = ivec2(int(mod(gl_VertexID, meshWidth)), int(gl_VertexID / meshWidth));
     vec2 texIdx = vec2(meshIdx.x, meshIdx.y) * resolution;
-
-    vec2 param =
-        (enableSmoothing) ? bicubic(texIdx, componentColor, componentHeight) :
-        bilinear(texIdx, componentColor, componentHeight);
+    
+    vec2 param;
+    switch (interpolationMode) {
+        case 2:
+            param = bicubic(texIdx, componentColor, componentHeight);
+            break;
+        case 1:
+            param = bilinear(texIdx, componentColor, componentHeight);
+            break;
+        default:
+            param = getTextureValue(texIdx, componentColor, componentHeight);
+            break;
+    }
     
     vec4 vPos = position;
     vPos.z = param[1] * meshDepth;

@@ -80,6 +80,10 @@
 		B449DBA8F11B159758F5004C /* ofxRD.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxRD.cpp; path = ../../../addons/ofxRD/src/ofxRD.cpp; sourceTree = SOURCE_ROOT; };
 		B87C60311EC1FE841C1ECD89 /* ofxLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxLabel.h; path = ../../../addons/ofxGui/src/ofxLabel.h; sourceTree = SOURCE_ROOT; };
 		BCC5C83C153EF43F5C45B70A /* ofxRDSampleRenderer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxRDSampleRenderer.cpp; path = ../../../addons/ofxRD/src/ofxRDSampleRenderer.cpp; sourceTree = SOURCE_ROOT; };
+		C6A588E61F77F34C004DBAE8 /* passthru.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = passthru.vert; sourceTree = "<group>"; };
+		C6A588E71F77F34C004DBAE8 /* sampleRenderer.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = sampleRenderer.frag; sourceTree = "<group>"; };
+		C6A588E81F77F34C004DBAE8 /* sampleRenderer.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = sampleRenderer.vert; sourceTree = "<group>"; };
+		C6A588E91F77F34C004DBAE8 /* updateMap.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = updateMap.frag; sourceTree = "<group>"; };
 		C70D8946940288799E82131E /* ofxSliderGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSliderGroup.h; path = ../../../addons/ofxGui/src/ofxSliderGroup.h; sourceTree = SOURCE_ROOT; };
 		C88333E71C9457E441C33474 /* ofxButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxButton.cpp; path = ../../../addons/ofxGui/src/ofxButton.cpp; sourceTree = SOURCE_ROOT; };
 		D55BB44561D6D640D99D3324 /* ofxRDSampleRenderer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxRDSampleRenderer.h; path = ../../../addons/ofxRD/src/ofxRDSampleRenderer.h; sourceTree = SOURCE_ROOT; };
@@ -217,6 +221,18 @@
 			name = addons;
 			sourceTree = "<group>";
 		};
+		C6A588E51F77F34C004DBAE8 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				C6A588E61F77F34C004DBAE8 /* passthru.vert */,
+				C6A588E71F77F34C004DBAE8 /* sampleRenderer.frag */,
+				C6A588E81F77F34C004DBAE8 /* sampleRenderer.vert */,
+				C6A588E91F77F34C004DBAE8 /* updateMap.frag */,
+			);
+			name = shaders;
+			path = ../shaders;
+			sourceTree = "<group>";
+		};
 		E4328144138ABC890047C5CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +246,7 @@
 			children = (
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				C6A588E51F77F34C004DBAE8 /* shaders */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,

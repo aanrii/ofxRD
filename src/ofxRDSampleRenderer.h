@@ -11,7 +11,6 @@ class ofxRDSampleRenderer{
     float resolution;
     float colors[24];
     float colors_pos[6];
-    ofParameter<bool> enableBicubic;
     ofParameter<bool> enableHeatMap;
     ofParameterGroup options;
     bool updatedOptions;
