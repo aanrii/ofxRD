@@ -10,3 +10,12 @@ Its features are:
 ![screenshot1](https://raw.githubusercontent.com/aanrii/ofxRD/master/images/screenshot_2.png)
 ![screenshot1](https://raw.githubusercontent.com/aanrii/ofxRD/master/images/screenshot_3.png)
 ![screenshot1](https://raw.githubusercontent.com/aanrii/ofxRD/master/images/screenshot_4.png)
+
+## Dependency
+ofxXmlSettings is needed.
+
+## Tested on
+* macOS 10.12.6
+* MacBook Pro (Retina, 13-inch, Late 2013)
+* Xcode 8.3.3
+* openFrameworks 0.9.8
